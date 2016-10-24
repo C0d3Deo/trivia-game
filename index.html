@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Crystal Met--ropolis</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+        <!-- Add your site or application content here -->
+        <!-- <section id="overlay" style="display: none"> -->
+        <header>
+            <div id="innerHeader">
+              <h1>Crystal Power</h1>
+            </div>
+        </header>
+        <div id="instructPopup" title="" style="display: none";>
+            <div>
+                <img src="assets/images/close-icon.png" alt="" id="close">
+            </div id="popText">
+            Welcome to the Crystal Game! Click the crystals below to try to reach the chosen number. Going over = GAME OVER!
+        </div>
+        <!-- </section> -->
+
+        <div id="wrapper">
+            <div id="crysGoal"></div>
+            <div id="statBox">
+            	<div class="stat">Wins: <span id="wins"></span></div>
+                <br />
+            	<div class="stat">Losses:  <span id="losses"></span></div>
+            </div>
+            <section id="crysRow">
+            	<img src="assets/images/crystalorange.jpg" alt="" class="crystals" id="crys1">
+            	<img src="assets/images/crystalpurple.jpg" alt="" class="crystals" id="crys2">
+            	<img src="assets/images/crystalblue.jpg" alt="" class="crystals" id="crys3">
+            	<img src="assets/images/crystalclear.jpg" alt="" class="crystals" id="crys4">
+            </section>
+            <div id="scoreBox">
+            	<p class="scoreHeader">Current Points: </p>
+            	<div class="scoreCntr">0</div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+       <script type= "text/javascript" src="assets/javascript/game.js"></script>
+
+        
+    </body>
+</html>

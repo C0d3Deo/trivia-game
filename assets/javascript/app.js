@@ -1,4 +1,4 @@
-var counter = 30.00;
+var counter = 25.00;
 var interval;
 var score = 0;
 var right = 0;
@@ -11,38 +11,54 @@ function count (){
 var countDwn = setInterval(count, 10);
 	
 function start(){
-    // I've realized that my timer doesn't count in actual tenths of seconds due to an inherent problem of the javascript language. The solutions to fix it seemed like more trouble than it was worth. Users have "about" 16 seconds which is fine to me.
+    // I've realized that my timer doesn't count in actual tenths of seconds due to an inherent problem of the javascript language. The solutions to fix it seemed like more trouble than it was worth. Users have "about" 30 seconds which is fine to me.
     countDwn;
     $("#counterBox").html(counter.toFixed(2));
 } 
 
+function tellEm (){
+	// $("#timeScore", "#rightScore", "wrongScore").html(counter, right, wrong);
+	alert("Time Left: " + counter.toFixed(2) +"\n" +
+		"Not Wrong: " + right + "\n" +
+		"Not Not Anti-Right: " + wrong + "\n" +
+		"Score: " + score);
+}
+
 $(document).ready(function() {
-	// $("input[type=radio]").prop("checked", false);
+	$("input[type=radio]").prop("checked", false);
 	interval = setInterval(start,10)
+	// if ($("input:checked").length < 8){
+	// 	$("#submit").attr("disabled", "disabled");
+	// }else {
+	// 	$("#submit").removeAttr("disabled");
+	// }
 
     $("#submit").on("click", function (){
     	clearInterval(interval);
     	score = Math.round(counter);
-    	var numQuestions = $(".question").length;
-    	for (var i = 0; i < numQuestions; i++) {
-    		var questions = document.getElementsByClassName("question");
-    		var selectValue =  questions[i].input[questions[i].checkedIndex].val();
-    		if (selectedValue == "wrong"){
+  //   	var numQuestions = $(".question").length;
+		// var questions = document.getElementsByClassName("question");
+		// var selectedValue;
+  //   	for (var i = 0; i < numQuestions; i++) {
+  //   		selectedValue =  questions[i].
+		$("input:checked").each(function(){
+
+			var self = this
+    		if ($(this).attr("value") == "wrong") {
     			score += -2;
     			++wrong;
     			console.log(score);
     			console.log(wrong);
-    		}else if (selectedValue == "right"){
+    		}else if ($(this).attr("value") == "right"){
     			score += 4;
     			++right;
     			console.log(score);
     			console.log(right);
+    		}else {
+    			console.log("something")
     		}
-    	}
-    	// setTimeout( alert("Time Left: " + counter +"\n" +
-    	// 		"Not Wrong: " + right + "\n" +
-    	// 		"Not Not Anti-Right: " + wrong), 5000);
-    	// $("#timeScore", "#rightScore", "wrongScore").html(counter, right, wrong);
+    	});
+    	setTimeout(tellEm, 500);
 
   //   	$('<div id="overlay">').css({//creating overlay div
 		//       "width" : "100%"

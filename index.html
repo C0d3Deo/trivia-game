@@ -13,7 +13,21 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.7.2/jquery-ui.min.js" integrity="sha256-4h4SHCCUAKFl7xWF9JeZp9tnU8lmM5bt6G3kNK6E4ek=" crossorigin="anonymous">
+        </script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+      <!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
 
@@ -24,98 +38,119 @@
               <h1>Troll Quiz.com.net.gov.edu.org.trollolololol</h1>
             </div>
         </header>
+        
+        <div id="counter-wrapper">
+            <div id="counterBox"> 
+                <h2>24.00</h2>
+            </div>
+        </div>
+
+        <h2>Guess the wrong question . . . right?</h2>
+
         <form>
 
-<p>
-    1. Can a match box? 
-</p> 
-
-<input type="radio" name="Q1" id="Q1a" value="-2"> What!? </input>
-<input type="radio" name="Q1" id="Q1b" value="4"> No, but a tin can! </input> <!--answer -->
-<input type="radio" name="Q1" id="Q1c" value="-2"> No . . . </input>
-<input type="radio" name="Q1" id="Q1d" value="-2"> Yes, and a bow strings! </input>
-
-
-<p> 
-    2. According to society, Jacks are best known for their . . .?
-</p> 
+            <p class="question">
+                1. Can a match box? 
+                <div class="choices">
+                    <input type="radio" name="Q1" id="Q1a" value="wrong" > What!? </input>
+                    <input type="radio" name="Q1" id="Q1b" value="right" > No, but a tin can! </input> <!--answer -->
+                    <input type="radio" name="Q1" id="Q1c" value="wrong" > No . . . </input>
+                    <input type="radio" name="Q1" id="Q1d" value="wrong" > Yes, and a guitar strings! </input>
+                </div>
+            </p> 
 
 
-<input type="radio" name="Q2" id="Q2a" value="-2"> Posteriors </input>
-<input type="radio" name="Q2" id="Q2b" value="-2"> Cards </input>
-<input type="radio" name="Q2" id="Q2c" value="4"> Apples </input> <!--answer -->
-<input type="radio" name="Q2" id="Q2d" value="-2"> Jills </input>
+            <p class="question"> 
+                2. According to society, Jacks are best known for their . . .?
+                <div class="choices">
+                    <input type="radio" name="Q2" id="Q2a" value="wrong" > Posteriors </input>
+                    <input type="radio" name="Q2" id="Q2b" value="wrong" > Cards </input>
+                    <input type="radio" name="Q2" id="Q2c" value="right" > Apples </input> <!--answer -->
+                    <input type="radio" name="Q2" id="Q2d" value="wrong" > Jills </input>
+                </div>
+            </p> 
 
 
-<p> 
-    3. Which of these is the realest form of bacon? 
-</p> 
+            <p class="question"> 
+                3. Which of these is the realest form of bacon? 
+                <div class="choices">
+                    <input type="radio" name="Q3" id="Q3a" value="right" > Canadian </input> <!--answer -->
+                    <input type="radio" name="Q3" id="Q3b" value="wrong" > Turkey </input>
+                    <input type="radio" name="Q3" id="Q3c" value="wrong" > Kevin </input>
+                    <input type="radio" name="Q3" id="Q3d" value="wrong" > Applewood Thick Cut </input>
+                </div>
+            </p> 
 
 
-<input type="radio" name="Q3" id="Q3a" value="4"> Canadian </input> <!--answer -->
-<input type="radio" name="Q3" id="Q3b" value="-2"> Turkey </input>
-<input type="radio" name="Q3" id="Q3c" value="-2"> Kevin </input>
-<input type="radio" name="Q3" id="Q3d" value="-2"> Applewood Thick Cut </input>
+            <p class="question"> 
+                4. Which is the better candidate in the 2016 election?
+                <div class="choices">
+                    <input type="radio" name="Q4" id="Q4a" value="wrong" > Trump </input>
+                    <input type="radio" name="Q4" id="Q4b" value="wrong" > Clinton </input>
+                    <input type="radio" name="Q4" id="Q4c" value="wrong" > Sanders </input>
+                    <input type="radio" name="Q4" id="Q4d" value="right" > Obama </input> <!--answer -->
+                </div>
+            </p> 
 
 
-<p> 
-    4. Which is the better candidate in the 2016 election?
-</p> 
+            <p class="question"> 
+                5. True or False: Can you spell "chicken" with a "2"? 
+                <div class="choices">
+                    <input type="radio" name="Q5" id="Q5a" value="right" > True, only if you're #4 </input> <!--answer -->
+                    <input type="radio" name="Q5" id="Q5b" value="wrong" > False, but I can with a pencil! </input>
+                    <input type="radio" name="Q5" id="Q5c" value="wrong" > True, but why? </input>
+                    <input type="radio" name="Q5" id="Q5d" value="wrong" > False, need a "3" </input>
+                </div>
+            </p>
 
 
-<input type="radio" name="Q4" id="Q4a" value="-2"> Trump </input>
-<input type="radio" name="Q4" id="Q4b" value="-2"> Clinton </input>
-<input type="radio" name="Q4" id="Q4c" value="-2"> Sanders </input>
-<input type="radio" name="Q4" id="Q4d" value="4"> Obama </input> <!--answer -->
+            <p class="question" id="q6"> 
+                6. What color is the sky? 
+                <div class="choices">
+                    <input type="radio" name="Q6" id="Q6a" value="wrong" > Blue </input> 
+                    <input type="radio" name="Q6" id="Q6b" value="wrong" > Aquamarine </input>
+                    <input type="radio" name="Q6" id="Q6c" value="right" > Light Blue </input> <!--answer -->
+                    <input type="radio" name="Q6" id="Q6d" value="wrong" > Sky Blue </input>
+                </div>
+            </p>
 
 
-<p> 
-    5. True or False: Can you spell "chicken" with a "2"? 
-</p>
+            <p class="question"> 
+                7. Everyone knows the Muffin Man. But what about his cousin? 
+                <div class="choices">
+                    <input type="radio" name="Q7" id="Q7a" value="wrong" > You mean the Gingerbread Man?</input> 
+                    <input type="radio" name="Q7" id="Q7b" value="right" > You mean Wendell? </input> <!--answer -->
+                    <input type="radio" name="Q7" id="Q7c" value="wrong" > The Muffin Man&trade; has no next of kin. </input>
+                    <input type="radio" name="Q7" id="Q7d" value="wrong" > You mean Cousin of the Muffin Man&trade;? </input>
+                </div>
+            </p>
 
 
-<input type="radio" name="Q5" id="Q5a" value="4"> True, only if you're #4 </input> <!--answer -->
-<input type="radio" name="Q5" id="Q5b" value="-2"> False, but I can with a pencil! </input>
-<input type="radio" name="Q5" id="Q5c" value="-2"> True, but why? </input>
-<input type="radio" name="Q5" id="Q5d" value="-2"> False, need a "3" </input>
-
-<p> 
-    6. What color is the sky? 
-</p>
-
-
-<input type="radio" name="Q6" id="Q6a" value="-2"> Blue </input> 
-<input type="radio" name="Q6" id="Q6b" value="-2"> Aquamarine </input>
-<input type="radio" name="Q6" id="Q6c" value="4"> Light Blue </input> <!--answer -->
-<input type="radio" name="Q6" id="Q6d" value="-2"> Sky Blue </input>
-
-<p> 
-    7. Everyone knows the Muffin Man. But what about his cousin? 
-</p>
+            <p class="question"> 
+                8. True or False: What is the meaning of life?
+                <div class="choices">
+                    <input type="radio" name="Q8" id="Q8a" value="wrong" > THAT'S NOT A TRUE OR FALSE!!! </input> 
+                    <input type="radio" name="Q8" id="Q8b" value="right" > Life is 42 </input> <!--answer -->
+                    <input type="radio" name="Q8" id="Q8c" value="wrong" > All life is truth </input>
+                    <input type="radio" name="Q8" id="Q8d" value="wrong" > All lives are false; we don't exist</input>
+                </div>
+            </p>
 
 
-<input type="radio" name="Q7" id="Q7a" value="-2"> You mean the Gingerbread Man?</input> 
-<input type="radio" name="Q7" id="Q7b" value="4"> You mean Wendell? </input> <!--answer -->
-<input type="radio" name="Q7" id="Q7c" value="-2"> Muffin Man&trade; has no next of kin. </input>
-<input type="radio" name="Q7" id="Q7d" value="-2"> You mean Cousin of the Muffin Man&trade;? </input>
-
-<p> 
-    8. True or False: What is the meaning of life?
-</p>
+            <p>
+                <input type="button" name="submit" id="submit" value="submit"/> </input>
+            </p>
 
 
-<input type="radio" name="Q8" id="Q8a" value="-2"> THAT'S NOT A TRUE OR FALSE!!! </input> 
-<input type="radio" name="Q8" id="Q8b" value="4"> Life is 42 </input> <!--answer -->
-<input type="radio" name="Q8" id="Q8c" value="-2"> All life is truth </input>
-<input type="radio" name="Q8" id="Q8d" value="-2"> All lives are false; we don't exist</input>
+        </form>
 
-<p>
-    <input type="button" name="submit" id="submit" value="submit"/> </input>
-</p>
-
-
-</form>
-
+        <div id="dialog-1" title="!EMAG" style="display: none;">
+           <p> Time Left: <span id="timeScore"></span></p>
+           <p> Not Wrong: <span id="rightScore"></span></p>
+           <p> Not Not Anti-Right: <span id="wrongScore"></span></p>
+        </div>
+        
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
 
     </body>
 </html>

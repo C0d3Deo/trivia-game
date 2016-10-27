@@ -1,4 +1,19 @@
 body {
 	background-image: url(../images/troll-bg.jpg);
 	background-size: cover;
+	color: forestgreen;
+	text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;
+}
+
+#counterBox {
+	font-size: 72px;
+	position: top;
+	position: relative;
+
+}
+
+form {
+	text-align: justify;
+	font-size: 24px;
+
 }

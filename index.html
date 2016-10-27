@@ -20,7 +20,7 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.7.2/jquery-ui.min.js" integrity="sha256-4h4SHCCUAKFl7xWF9JeZp9tnU8lmM5bt6G3kNK6E4ek=" crossorigin="anonymous">
         </script>
 
@@ -35,13 +35,14 @@
         <!-- <section id="overlay" style="display: none"> -->
         <header>
             <div id="innerHeader">
-              <h1>Troll Quiz.com.net.gov.edu.org.trollolololol</h1>
+              <h1 classs="h1">Troll Quiz.com.net.gov.edu.org.trollolololol</h1>
             </div>
         </header>
         
-        <div id="counter-wrapper">
+        <div class="content-wrapper col-md-6">
+        <div id="counter-wrapper" class="img-circle">
             <div id="counterBox"> 
-                <h2>25.00</h2>
+                <h2 id="timer">25.00</h2>
             </div>
         </div>
 
@@ -148,6 +149,7 @@
            <p> Time Left: <span id="timeScore"></span></p>
            <p> Not Wrong: <span id="rightScore"></span></p>
            <p> Not Not Anti-Right: <span id="wrongScore"></span></p>
+        </div>
         </div>
         
         <script type="text/javascript" src="assets/javascript/app.js"></script>

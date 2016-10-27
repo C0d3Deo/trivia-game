@@ -4,17 +4,19 @@ var score = 0;
 var right = 0;
 var wrong = 0;
 
+$(document).ready(function() {
+
 function count (){
 	counter -= 0.01;
+    // I've realized that my timer doesn't count in actual tenths of seconds due to an inherent problem of the javascript language. The solutions to fix it seemed like more trouble than it was worth. Users have "about" 30 seconds which is fine to me.
+    $("#counterBox").html(counter.toFixed(2));
+	if (counter <= 0.00) {
+		clearInterval(window.interval);
+		alert("YOU LOST!!! . . . Problem?");
+		return;
+	}
 }
 
-var countDwn = setInterval(count, 10);
-	
-function start(){
-    // I've realized that my timer doesn't count in actual tenths of seconds due to an inherent problem of the javascript language. The solutions to fix it seemed like more trouble than it was worth. Users have "about" 30 seconds which is fine to me.
-    countDwn;
-    $("#counterBox").html(counter.toFixed(2));
-} 
 
 function tellEm (){
 	// $("#timeScore", "#rightScore", "wrongScore").html(counter, right, wrong);
@@ -24,14 +26,14 @@ function tellEm (){
 		"Score: " + score);
 }
 
-$(document).ready(function() {
 	$("input[type=radio]").prop("checked", false);
-	interval = setInterval(start,10)
+	interval = setInterval(count,10)
 	// if ($("input:checked").length < 8){
 	// 	$("#submit").attr("disabled", "disabled");
 	// }else {
 	// 	$("#submit").removeAttr("disabled");
 	// }
+	
 
     $("#submit").on("click", function (){
     	clearInterval(interval);
